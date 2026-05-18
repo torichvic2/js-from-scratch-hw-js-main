@@ -6,4 +6,17 @@
 */
 
 // your code
-let factorial
+let factorial = 1;
+let start_number = 0;
+const INITIAL_NUMBER = 10;
+
+while (start_number < INITIAL_NUMBER) {
+    if (start_number < INITIAL_NUMBER) {
+        start_number = start_number + 1;
+        factorial = start_number * factorial;
+    }
+    else {
+        break;
+    }
+    console.log(factorial);
+}
