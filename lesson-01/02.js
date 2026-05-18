@@ -7,15 +7,11 @@
 
 // your code
 let factorial = 1;
-let start_number = 0;
+let start_number = 1;
 const INITIAL_NUMBER = 10;
 
-while (start_number < INITIAL_NUMBER) {
-    if (start_number < INITIAL_NUMBER) {
-        start_number = start_number + 1;
+while (start_number <= INITIAL_NUMBER) {
         factorial = start_number * factorial;
-    }
-    else {
-        break;
-    }
+        start_number = start_number + 1;
 }
+console.log(factorial);
