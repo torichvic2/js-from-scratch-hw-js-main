@@ -18,5 +18,4 @@ while (start_number < INITIAL_NUMBER) {
     else {
         break;
     }
-    console.log(factorial);
 }
