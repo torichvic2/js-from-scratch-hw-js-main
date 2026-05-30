@@ -15,4 +15,21 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements() {}
+function findUniqueElements(array) {
+    let newArr = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let elemOfArr = array[i];
+
+        for (let j = 0; j < newArr.length; j++) {
+            let elemOfNewArr = newArr[j];
+
+            if (elemOfArr !== elemOfNewArr) {
+                newArr.push(elemOfArr);
+            }
+        }
+    }
+    return newArr
+}
+
+console.log(findUniqueElements([1, 2, 3, 2, 1, 4]))
