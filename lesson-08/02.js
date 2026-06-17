@@ -4,7 +4,7 @@
  */
 
 function isNumeric(str) {
-    if (isNaN(Number(str))) {
+    if (isNaN(Number(str)) || typeof str === "string") {
         return false;
     }
     if (typeof Number(str) === "number") {
