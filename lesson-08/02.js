@@ -4,12 +4,12 @@
  */
 
 function isNumeric(str) {
-    if (isNaN(Number(str)) || typeof str === "string") {
+    if (isNaN(Number(str)) || str === " ") {
         return false;
     }
     if (typeof Number(str) === "number") {
         return true;
-    }// your code
+    }
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
