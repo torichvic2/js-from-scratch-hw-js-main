@@ -69,7 +69,7 @@ clearCartButton.addEventListener('click', function () {
 
 // Твой код:
 petShop.addEventListener("click", (event) => {
-    if (cart.length <= 3) {
+    if (cart.length < 3) {
         if (event.target.classList.contains("pet")) {
             cart.push(event.target.id)
             updateCartDisplay();
