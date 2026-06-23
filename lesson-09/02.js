@@ -33,19 +33,19 @@ let isTimerStarted = false
 let timerId = null;
 
 startButton.addEventListener('click', () => {
-    let counter = 3
-
-    if (timerId) {
+    if (!timerId === null) {
         return;
     }
 
+    let counter = 3
     countdownDisplay.textContent = counter;
 
     timerId = setInterval(function rocketStarts() {
-        if (counter > 1) {
-            counter--;
+        counter--;
+
+        if (counter > 0) {
             countdownDisplay.textContent = counter;
-        } else if (counter <= 1){
+        } else {
             countdownDisplay.textContent = "🚀";
             clearInterval(timerId);
             timerId = null;
