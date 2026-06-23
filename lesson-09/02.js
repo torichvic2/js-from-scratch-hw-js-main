@@ -33,7 +33,7 @@ let isTimerStarted = false
 let timerId = null;
 
 startButton.addEventListener('click', () => {
-    if (!timerId === null) {
+    if (timerId !== null) {
         return;
     }
 
@@ -54,6 +54,11 @@ startButton.addEventListener('click', () => {
 });
 
 cancelButton.addEventListener('click', (event) => {
+    if (timerId === null) {
+        return;
+    }
+
     clearInterval(timerId);
+    timerId = null;
     countdownDisplay.textContent = "Отменено";
 });
